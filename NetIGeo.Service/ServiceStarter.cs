@@ -1,19 +1,22 @@
-﻿using log4net;
+﻿using System.Web.Http.SelfHost;
 
 namespace NetIGeo.Service
 {
     public class ServiceStarter
     {
-        private readonly ILog _log;
+        private readonly IHttpSelfHostConfigurationWrapper _httpSelfHostConfigurationWrapper;
 
-        public ServiceStarter(ILog log)
+        public ServiceStarter(IHttpSelfHostConfigurationWrapper httpSelfHostConfigurationWrapper)
         {
-            _log = log;
+            _httpSelfHostConfigurationWrapper = httpSelfHostConfigurationWrapper;
         }
 
         public void Start()
         {
-            _log.Debug("Esto esta funcionando");
+            using (var server = new HttpSelfHostServer(_httpSelfHostConfigurationWrapper.Create()))
+            {
+                server.OpenAsync().Wait();
+            }
         }
     }
 }

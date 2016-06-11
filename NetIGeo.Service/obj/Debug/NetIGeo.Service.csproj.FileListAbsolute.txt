@@ -22,3 +22,11 @@ C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\bin\Debug\Mic
 C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\obj\Debug\NetIGeo.Service.exe
 C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\obj\Debug\NetIGeo.Service.pdb
 C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\bin\Debug\UnityLog4NetExtension.dll
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\bin\Debug\System.Web.Http.dll
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\bin\Debug\System.Web.Http.SelfHost.dll
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\bin\Debug\System.Web.Http.xml
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Service\bin\Debug\System.Web.Http.SelfHost.xml

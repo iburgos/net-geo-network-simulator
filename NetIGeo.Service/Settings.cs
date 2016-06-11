@@ -8,6 +8,7 @@ namespace NetIGeo.Service
         public string ServiceName { get; set; }
         public string ServiceDisplayName { get; set; }
         public string ServiceDescription { get; set; }
+        public string BaseUrl { get; set; }
 
         protected override void Validate()
         {
@@ -19,6 +20,9 @@ namespace NetIGeo.Service
 
             if (String.IsNullOrWhiteSpace(ServiceDescription))
                 throw new Exception(nameof(ServiceDescription));
+
+            if (String.IsNullOrWhiteSpace(BaseUrl))
+                throw new Exception(nameof(BaseUrl));
         }
     }
 }

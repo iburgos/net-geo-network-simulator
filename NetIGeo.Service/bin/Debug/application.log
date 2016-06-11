@@ -5,3 +5,276 @@
 2016-06-11 18:01:26,282 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
 2016-06-11 18:01:26,289 DEBUG NetIGeo.Service.ServiceStarter - Esto esta funcionando
 2016-06-11 18:01:26,294 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 18:23:47,429 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 18:23:47,449 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 18:23:47,723 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 18:23:47,801 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 18:23:47,935 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 18:32:34,561 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 18:32:34,576 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 18:32:34,864 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 18:32:34,931 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 18:33:08,724 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 18:33:08,743 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 18:33:09,087 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 18:33:09,155 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 18:37:15,770 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 18:37:15,789 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 18:37:15,973 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 18:37:16,046 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 18:37:16,237 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 18:38:26,884 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 18:40:02,902 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 18:40:02,929 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 18:40:03,351 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 18:40:03,435 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 18:40:03,686 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 18:40:10,452 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 18:41:37,864 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 18:41:37,890 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 18:41:38,078 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 18:41:38,149 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 18:41:38,464 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 18:41:41,121 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 18:57:11,335 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 18:57:11,362 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 18:57:11,827 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 18:57:11,902 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 18:57:12,173 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 18:57:18,560 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 18:57:36,458 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 18:57:36,488 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 18:57:36,713 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 18:57:36,776 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 18:57:37,039 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 18:57:37,216 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 18:57:50,594 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 18:57:50,619 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 18:57:50,861 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 18:57:50,959 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 18:57:51,288 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 18:58:02,008 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 19:08:00,736 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 19:08:00,767 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 19:08:00,816 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 19:08:00,883 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 19:08:01,364 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 19:08:06,899 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 19:08:37,708 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 19:08:37,759 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 19:08:37,807 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 19:08:37,940 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 19:08:38,444 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 19:09:05,173 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 19:09:11,748 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 19:09:11,775 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 19:09:11,819 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 19:09:11,896 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 19:09:12,660 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 19:09:12,798 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 19:09:39,621 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 19:09:39,649 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 19:09:39,701 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 19:09:39,786 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 19:09:40,193 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 19:09:44,523 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 19:10:37,580 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 19:10:37,608 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 19:10:37,654 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 19:10:37,730 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 19:10:38,273 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 19:10:39,385 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 19:15:51,063 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 19:15:51,090 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 19:15:51,141 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 19:15:51,224 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 19:15:51,711 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
+2016-06-11 19:15:54,998 FATAL Topshelf.Hosts.ConsoleRunHost - The service threw an unhandled exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<SendAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.SelfHost.HttpSelfHostServer.<ProcessRequestContext>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.<>c.<ThrowAsync>b__6_1(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+2016-06-11 19:17:20,460 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 19:17:20,490 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 19:17:20,555 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 19:17:20,663 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
