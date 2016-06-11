@@ -11,7 +11,14 @@ namespace NetIGeo.Service
 
         protected override void Validate()
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrWhiteSpace(ServiceName))
+                throw new Exception(nameof(ServiceName));
+
+            if (String.IsNullOrWhiteSpace(ServiceDisplayName))
+                throw new Exception(nameof(ServiceDisplayName));
+
+            if (String.IsNullOrWhiteSpace(ServiceDescription))
+                throw new Exception(nameof(ServiceDescription));
         }
     }
 }

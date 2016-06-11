@@ -1,10 +1,19 @@
-﻿namespace NetIGeo.Service
+﻿using log4net;
+
+namespace NetIGeo.Service
 {
     public class ServiceStarter
     {
+        private readonly ILog _log;
+
+        public ServiceStarter(ILog log)
+        {
+            _log = log;
+        }
+
         public void Start()
         {
-            throw new System.NotImplementedException();
+            _log.Debug("Esto esta funcionando");
         }
     }
 }

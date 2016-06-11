@@ -1,26 +1,39 @@
-﻿using Topshelf;
+﻿using log4net.Config;
+using Microsoft.Practices.Unity;
+using NetIGeo.Service.Bootstrappers;
+using Topshelf;
+using Topshelf.Unity;
 
 namespace NetIGeo.Service
 {
     public class Program
     {
-        public void Main()
+        public static void Main()
         {
+            XmlConfigurator.Configure();
+            var settings = new Settings();
+            var container = new UnityContainer();
 
-            HostFactory.Run(x =>                                 //1
+
+            container.AddNewExtension<Bootstrapper>();
+
+            HostFactory.Run(c =>
             {
-                x.Service<ServiceStarter>(s =>                        //2
-                {
-                    s.ConstructUsing(name => new ServiceStarter());     //3
-                    s.WhenStarted(tc => tc.Start());              //4
-                    s.WhenStopped(tc => { });               //5
-                });
-                x.RunAsLocalSystem();                            //6
+                c.UseUnityContainer(container);
+                c.UseLog4Net();
 
-                x.SetDescription("Sample Topshelf Host");        //7
-                x.SetDisplayName("Stuff");                       //8
-                x.SetServiceName("Stuff");                       //9
+                c.SetServiceName(settings.ServiceName);
+                c.SetDisplayName(settings.ServiceDisplayName);
+                c.SetDescription(settings.ServiceDescription);
+
+                c.Service<ServiceStarter>(s =>
+                {
+                    s.ConstructUsingUnityContainer();
+                    s.WhenStarted(pcs => pcs.Start());
+                    s.WhenStopped(_ => { });
+                });
             });
+            System.Console.ReadKey();
         }
     }
 }

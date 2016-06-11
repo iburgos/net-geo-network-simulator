@@ -1,0 +1,4 @@
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Common\bin\Debug\NetIGeo.Common.dll
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Common\bin\Debug\NetIGeo.Common.pdb
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Common\obj\Debug\NetIGeo.Common.dll
+C:\Users\Ignacio\Documents\GitHub\net-igeo-service\NetIGeo.Common\obj\Debug\NetIGeo.Common.pdb

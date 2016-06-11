@@ -1,0 +1,7 @@
+2016-06-11 18:01:26,162 INFO Topshelf.HostFactory - Configuration Result:
+[Success] Name NeIGeo Service, [Success] DisplayName NeIGeoService, [Success] Description Geodesical calculations, [Success] ServiceName NeIGeo Service
+2016-06-11 18:01:26,182 INFO Topshelf.HostConfigurators.HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2016-06-11 18:01:26,224 DEBUG Topshelf.Builders.RunBuilder - Running as a console application, creating the console host.
+2016-06-11 18:01:26,282 DEBUG Topshelf.Hosts.ConsoleRunHost - Starting up as a console application
+2016-06-11 18:01:26,289 DEBUG NetIGeo.Service.ServiceStarter - Esto esta funcionando
+2016-06-11 18:01:26,294 INFO Topshelf.Hosts.ConsoleRunHost - The NeIGeo Service service is now running, press Control+C to exit.
