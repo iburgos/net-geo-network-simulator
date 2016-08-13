@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NetIGeo.Library")]
+[assembly: AssemblyTitle("NetIGeo.Domain")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NetIGeo.Library")]
+[assembly: AssemblyProduct("NetIGeo.Domain")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5904a7b0-a47f-4d8a-98c2-d15369e8e7fb")]
+[assembly: Guid("1cf16447-e0c1-4e19-b69b-b161cf5f0cd1")]
 
 // Version information for an assembly consists of the following four values:
 //
