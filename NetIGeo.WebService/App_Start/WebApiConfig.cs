@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Http.ExceptionHandling;
 
 namespace NetIGeo.WebService
 {
@@ -13,6 +14,8 @@ namespace NetIGeo.WebService
                 "api/{controller}/{id}",
                 new {id = RouteParameter.Optional}
                 );
+
+            config.Services.Add(typeof(IExceptionLogger), new Log4NetExceptionLogger());
         }
     }
 }

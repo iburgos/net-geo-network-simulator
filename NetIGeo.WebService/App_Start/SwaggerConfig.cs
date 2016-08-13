@@ -12,7 +12,8 @@ namespace NetIGeo.WebService
         public static void Register()
         {
             GlobalConfiguration.Configuration
-                .EnableSwagger(c => { c.SingleApiVersion("v1", "NetIGeo.WebService"); });
+                .EnableSwagger(c => { c.SingleApiVersion("v1", "NetIGeo.WebService"); })
+                .EnableSwaggerUi(c => { });
         }
     }
 }
