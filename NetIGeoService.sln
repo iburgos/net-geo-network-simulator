@@ -7,13 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIGeo.Service", "NetIGeo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIGeo.Common", "NetIGeo.Common\NetIGeo.Common.csproj", "{965860C6-613F-4557-A6C5-D4BB3D1FC60F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIGeo.Library", "NetIGeo.Library\NetIGeo.Library.csproj", "{5904A7B0-A47F-4D8A-98C2-D15369E8E7FB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIGeo.DataAccess", "NetIGeo.DataAccess\NetIGeo.DataAccess.csproj", "{C63E5BCD-44FA-40E7-A909-5978D19FD32E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C4619387-4E67-4E04-A1E1-3DEC391FED4E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIGeo.WebService", "NetIGeo.WebService\NetIGeo.WebService.csproj", "{A7788A3E-0C97-4004-8C6C-2ED10B18D9A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIGeo.Domain", "NetIGeo.Domain\NetIGeo.Domain.csproj", "{1CF16447-E0C1-4E19-B69B-B161CF5F0CD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,6 @@ Global
 		{965860C6-613F-4557-A6C5-D4BB3D1FC60F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{965860C6-613F-4557-A6C5-D4BB3D1FC60F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{965860C6-613F-4557-A6C5-D4BB3D1FC60F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5904A7B0-A47F-4D8A-98C2-D15369E8E7FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5904A7B0-A47F-4D8A-98C2-D15369E8E7FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5904A7B0-A47F-4D8A-98C2-D15369E8E7FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5904A7B0-A47F-4D8A-98C2-D15369E8E7FB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C63E5BCD-44FA-40E7-A909-5978D19FD32E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C63E5BCD-44FA-40E7-A909-5978D19FD32E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C63E5BCD-44FA-40E7-A909-5978D19FD32E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,6 +37,10 @@ Global
 		{A7788A3E-0C97-4004-8C6C-2ED10B18D9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7788A3E-0C97-4004-8C6C-2ED10B18D9A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7788A3E-0C97-4004-8C6C-2ED10B18D9A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CF16447-E0C1-4E19-B69B-B161CF5F0CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CF16447-E0C1-4E19-B69B-B161CF5F0CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CF16447-E0C1-4E19-B69B-B161CF5F0CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CF16447-E0C1-4E19-B69B-B161CF5F0CD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
