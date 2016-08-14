@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIGeo.WebService.Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIGeo.Domain.Tests", "NetIGeo.Domain.Tests\NetIGeo.Domain.Tests.csproj", "{CAE862DB-5085-46BD-9202-FA21997AA0FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetIGeo.DataAccess.Tests", "NetIGeo.DataAccess.Tests\NetIGeo.DataAccess.Tests.csproj", "{45198E68-2D90-401A-87B6-202AE8FA8099}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{CAE862DB-5085-46BD-9202-FA21997AA0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAE862DB-5085-46BD-9202-FA21997AA0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAE862DB-5085-46BD-9202-FA21997AA0FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45198E68-2D90-401A-87B6-202AE8FA8099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45198E68-2D90-401A-87B6-202AE8FA8099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45198E68-2D90-401A-87B6-202AE8FA8099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45198E68-2D90-401A-87B6-202AE8FA8099}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +66,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8B106972-2E2E-45C7-82F7-32A96E04068E} = {C4619387-4E67-4E04-A1E1-3DEC391FED4E}
 		{CAE862DB-5085-46BD-9202-FA21997AA0FF} = {C4619387-4E67-4E04-A1E1-3DEC391FED4E}
+		{45198E68-2D90-401A-87B6-202AE8FA8099} = {C4619387-4E67-4E04-A1E1-3DEC391FED4E}
 	EndGlobalSection
 EndGlobal
