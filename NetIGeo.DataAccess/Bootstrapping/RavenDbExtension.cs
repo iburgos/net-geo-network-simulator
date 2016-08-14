@@ -1,7 +1,6 @@
 ﻿using Microsoft.Practices.Unity;
 using NetIGeo.DataAccess.Common;
 using NetIGeo.DataAccess.RavenDb;
-using Raven.Client;
 using Raven.Client.Document;
 
 namespace NetIGeo.DataAccess.Bootstrappers
@@ -16,6 +15,7 @@ namespace NetIGeo.DataAccess.Bootstrappers
             _ravenDbLocation = ravenDbLocation;
             _ravenDbDatabase = ravenDbDatabase;
         }
+
         protected override void Initialize()
         {
             var documentStore = new DocumentStore
