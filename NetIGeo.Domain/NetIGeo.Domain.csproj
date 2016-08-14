@@ -80,6 +80,7 @@
     <Compile Include="ServiceResult.cs" />
     <Compile Include="ServiceResultCreator.cs" />
     <Compile Include="Services\ProjectCreationService.cs" />
+    <Compile Include="Services\ProjectRetrieverService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

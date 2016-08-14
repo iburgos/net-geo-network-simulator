@@ -8,6 +8,7 @@ namespace NetIGeo.Domain.Extensions
         protected override void Initialize()
         {
             Container.RegisterType<IProjectCreationService, ProjectCreationService>();
+            Container.RegisterType<IProjectRetrieverService, ProjectRetrieverService>();
             Container.RegisterType<IServiceResultCreator, ServiceResultCreator>();
         }
     }
