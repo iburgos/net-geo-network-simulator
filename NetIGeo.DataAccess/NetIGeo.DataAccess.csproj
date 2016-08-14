@@ -79,10 +79,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapping\RavenDbExtension.cs" />
+    <Compile Include="Common\Result.cs" />
+    <Compile Include="Common\ResultCreator.cs" />
     <Compile Include="Documents\IDocument.cs" />
     <Compile Include="Documents\ProjectDocument.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RavenDb\DocumentStorer.cs" />
+    <Compile Include="RavenDb\ProjectDocumentRetriever.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
