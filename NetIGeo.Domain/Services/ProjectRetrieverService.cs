@@ -1,30 +1,34 @@
 ﻿using System.Collections.Generic;
-using NetIGeo.DataAccess.Documents;
+using AutoMapper;
 using NetIGeo.DataAccess.RavenDb;
+using NetIGeo.Domain.Models;
 
 namespace NetIGeo.Domain.Services
 {
     public interface IProjectRetrieverService
     {
-        ServiceResult<IEnumerable<ProjectDocument>> Get();
+        ServiceResult<IEnumerable<ProjectModel>> Get();
     }
 
     public class ProjectRetrieverService : IProjectRetrieverService
     {
+        private readonly IMapper _mapper;
         private readonly IProjectDocumentRetriever _projectDocumentRetriever;
         private readonly IServiceResultCreator _serviceResultCreator;
 
         public ProjectRetrieverService(IProjectDocumentRetriever projectDocumentRetriever,
-            IServiceResultCreator serviceResultCreator)
+            IServiceResultCreator serviceResultCreator,
+            IMapper mapper)
         {
             _projectDocumentRetriever = projectDocumentRetriever;
             _serviceResultCreator = serviceResultCreator;
+            _mapper = mapper;
         }
 
-        public ServiceResult<IEnumerable<ProjectDocument>> Get()
+        public ServiceResult<IEnumerable<ProjectModel>> Get()
         {
             var result = _projectDocumentRetriever.Get();
-            return _serviceResultCreator.Create(result.Contents, result.Success);
+            return _serviceResultCreator.Create(_mapper.Map<IEnumerable<ProjectModel>>(result.Contents), result.Success);
         }
     }
 }
