@@ -8,6 +8,7 @@ namespace NetIGeo.Domain.Services
     public interface IProjectRetrieverService
     {
         ServiceResult<IEnumerable<ProjectModel>> Get();
+        ServiceResult<ProjectModel> Get(int id);
     }
 
     public class ProjectRetrieverService : IProjectRetrieverService
@@ -29,6 +30,12 @@ namespace NetIGeo.Domain.Services
         {
             var result = _projectDocumentRetriever.Get();
             return _serviceResultCreator.Create(_mapper.Map<IEnumerable<ProjectModel>>(result.Contents), result.Success);
+        }
+
+        public ServiceResult<ProjectModel> Get(int id)
+        {
+            var result = _projectDocumentRetriever.Get(id);
+            return _serviceResultCreator.Create(_mapper.Map<ProjectModel>(result.Contents), result.Success);
         }
     }
 }

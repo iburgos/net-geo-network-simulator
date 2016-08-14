@@ -11,7 +11,7 @@ namespace NetIGeo.WebService
 
             config.Routes.MapHttpRoute(
                 "DefaultApi",
-                "api/{controller}/{id}",
+                "igeoservice/{controller}/{id}",
                 new {id = RouteParameter.Optional}
                 );
 
