@@ -1,4 +1,5 @@
 ﻿using Microsoft.Practices.Unity;
+using NetIGeo.DataAccess.Common;
 using NetIGeo.DataAccess.RavenDb;
 using Raven.Client;
 using Raven.Client.Document;
@@ -25,6 +26,7 @@ namespace NetIGeo.DataAccess.Bootstrappers
 
             Container.RegisterInstance(documentStore, new ContainerControlledLifetimeManager());
             Container.RegisterType<IDocumentStorer, DocumentStorer>();
+            Container.RegisterType<IResultCreator, ResultCreator>();
         }
     }
 }
