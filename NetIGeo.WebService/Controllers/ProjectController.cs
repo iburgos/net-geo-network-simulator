@@ -31,9 +31,10 @@ namespace NetIGeo.WebService.Controllers
             if (project != null)
             {
                 var projectModel = _mapper.Map<ProjectModel>(project);
-                if (_projectCreationService.Create(projectModel))
+                var serviceResult = _projectCreationService.Create(projectModel);
+                if (serviceResult.Success)
                 {
-                    result = Ok();
+                    result = Ok(_mapper.Map<ProjectDto>(serviceResult.Contents));
                 }
             }
 
