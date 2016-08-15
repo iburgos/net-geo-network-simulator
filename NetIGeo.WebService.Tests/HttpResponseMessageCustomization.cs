@@ -1,4 +1,5 @@
-﻿using Ploeh.AutoFixture;
+﻿using System.Web.Http;
+using Ploeh.AutoFixture;
 
 namespace NetIGeo.WebService.Tests
 {
@@ -9,6 +10,8 @@ namespace NetIGeo.WebService.Tests
             //fixture.Customize<HttpRequestMessage>(c => c.Without(x => x.Content)
             //    .Do(x => x.Properties[Constants.BODY_PROPERTY_NAME] =
             //        fixture.Create<string>()));
+
+            
         }
     }
 }
