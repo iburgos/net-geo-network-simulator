@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NetIGeo.WebService;
 using NetIGeo.WebService.Controllers;
 
-namespace NetIGeo.Domain.Tests.Integration
+namespace NetIGeo.WebService.Tests.Integration
 {
     [TestClass]
     public class BootstrappingTests
