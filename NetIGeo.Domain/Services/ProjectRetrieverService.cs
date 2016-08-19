@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+
 using AutoMapper;
+
 using NetIGeo.DataAccess.RavenDb;
 using NetIGeo.Domain.Models;
 
@@ -14,28 +16,30 @@ namespace NetIGeo.Domain.Services
     public class ProjectRetrieverService : IProjectRetrieverService
     {
         private readonly IMapper _mapper;
-        private readonly IProjectDocumentRetriever _projectDocumentRetriever;
+        private readonly IProjectDocumentRepository _projectDocumentRepository;
         private readonly IServiceResultCreator _serviceResultCreator;
 
-        public ProjectRetrieverService(IProjectDocumentRetriever projectDocumentRetriever,
-            IServiceResultCreator serviceResultCreator,
-            IMapper mapper)
+        public ProjectRetrieverService(IProjectDocumentRepository projectDocumentRepository,
+                                       IServiceResultCreator serviceResultCreator,
+                                       IMapper mapper)
         {
-            _projectDocumentRetriever = projectDocumentRetriever;
+            _projectDocumentRepository = projectDocumentRepository;
             _serviceResultCreator = serviceResultCreator;
             _mapper = mapper;
         }
 
         public ServiceResult<IEnumerable<ProjectModel>> Get()
         {
-            var result = _projectDocumentRetriever.Get();
-            return _serviceResultCreator.Create(_mapper.Map<IEnumerable<ProjectModel>>(result.Contents), result.Success);
+            var repositoryResult = _projectDocumentRepository.GetAll();
+            return _serviceResultCreator.Create(_mapper.Map<IEnumerable<ProjectModel>>(repositoryResult.Contents),
+                repositoryResult.Success);
         }
 
         public ServiceResult<ProjectModel> Get(int id)
         {
-            var result = _projectDocumentRetriever.Get(id);
-            return _serviceResultCreator.Create(_mapper.Map<ProjectModel>(result.Contents), result.Success);
+            var repositoryResult = _projectDocumentRepository.Get(id);
+            return _serviceResultCreator.Create(_mapper.Map<ProjectModel>(repositoryResult.Contents),
+                repositoryResult.Success);
         }
     }
 }
