@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NetIGeo.DataAccess.Common;
 using NetIGeo.DataAccess.Documents;
 using NetIGeo.DataAccess.RavenDb;
 using NetIGeo.Domain.Models;
@@ -28,7 +29,7 @@ namespace NetIGeo.Domain.Tests.Services
         }
 
         [TestMethod]
-        public void Create_Always_MapsProjectDocument()
+        public void Create_Always_MapsProjectDocumentFromProjectModel()
         {
             var project = _fixture.Create<ProjectModel>();
 
@@ -36,6 +37,23 @@ namespace NetIGeo.Domain.Tests.Services
             sut.Create(project);
 
             _mapperMock.Verify(mapper => mapper.Map<ProjectDocument>(project), Times.Once());
+        }
+
+        [TestMethod]
+        public void Create_Always_MapsProjectModelFromProjectDocument()
+        {
+            var projectModel = _fixture.Create<ProjectModel>();
+            var projectDocumentToStore = _fixture.Create<ProjectDocument>();
+            var projectDocumentStored = _fixture.Create<ProjectDocument>();
+            var storeResult =
+                _fixture.Build<Result<IDocument>>().With(result => result.Contents, projectDocumentStored).Create();
+            _mapperMock.Setup(mapper => mapper.Map<ProjectDocument>(projectModel)).Returns(projectDocumentToStore);
+            _documentStorerMock.Setup(storer => storer.Store(projectDocumentToStore)).Returns(storeResult);
+
+            var sut = _fixture.Create<ProjectCreationService>();
+            sut.Create(projectModel);
+
+            _mapperMock.Verify(mapper => mapper.Map<ProjectModel>(projectDocumentStored), Times.Once());
         }
 
         [TestMethod]
@@ -52,12 +70,21 @@ namespace NetIGeo.Domain.Tests.Services
         [TestMethod]
         public void Create_Always_CallsServiceResultCreator()
         {
-            var project = _fixture.Create<ProjectModel>();
+            var projectModel = _fixture.Create<ProjectModel>();
+            var projectModelStored = _fixture.Create<ProjectModel>();
+            var projectDocumentToStore = _fixture.Create<ProjectDocument>();
+            var projectDocumentStored = _fixture.Create<ProjectDocument>();
+            var storeResult =
+                _fixture.Build<Result<IDocument>>().With(result => result.Contents, projectDocumentStored).Create();
+
+            _mapperMock.Setup(mapper => mapper.Map<ProjectDocument>(projectModel)).Returns(projectDocumentToStore);
+            _documentStorerMock.Setup(storer => storer.Store(projectDocumentToStore)).Returns(storeResult);
+            _mapperMock.Setup(mapper => mapper.Map<ProjectModel>(projectDocumentStored)).Returns(projectModelStored);
 
             var sut = _fixture.Create<ProjectCreationService>();
-            sut.Create(project);
+            sut.Create(projectModel);
 
-            _serviceResultCreatorMock.Verify(creator => creator.Create(project, It.IsAny<bool>()), Times.Once());
+            _serviceResultCreatorMock.Verify(creator => creator.Create(projectModelStored, It.IsAny<bool>()), Times.Once());
         }
     }
 }
