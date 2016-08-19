@@ -1,5 +1,7 @@
 ﻿using System;
 using log4net;
+
+using NetIGeo.DataAccess.Common;
 using NetIGeo.DataAccess.Documents;
 using Raven.Client;
 
@@ -7,7 +9,7 @@ namespace NetIGeo.DataAccess.RavenDb
 {
     public interface IDocumentStorer
     {
-        bool Store(IDocument document);
+        Result<IDocument> Store(IDocument document);
     }
 
     public class DocumentStorer : IDocumentStorer
@@ -21,18 +23,18 @@ namespace NetIGeo.DataAccess.RavenDb
             _log = log;
         }
 
-        public bool Store(IDocument document)
+        public Result<IDocument> Store(IDocument document)
         {
-            var successful = false;
-
+            IDocument result = document;
+            bool success = false;
             try
             {
                 using (var documentSession = _documentStore.OpenSession())
                 {
                     documentSession.Store(document);
                     documentSession.SaveChanges();
+                    success = true;
                 }
-                successful = true;
             }
             catch (Exception exception)
             {
@@ -40,7 +42,7 @@ namespace NetIGeo.DataAccess.RavenDb
                     document.GetType(), exception);
             }
 
-            return successful;
+            return new Result<IDocument> { Contents = document, Success = success};
         }
     }
 }

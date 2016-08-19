@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+
 using NetIGeo.DataAccess.Documents;
 using NetIGeo.DataAccess.RavenDb;
 using NetIGeo.Domain.Models;
@@ -17,8 +18,8 @@ namespace NetIGeo.Domain.Services
         private readonly IServiceResultCreator _serviceResultCreator;
 
         public ProjectCreationService(IDocumentStorer documentStorer,
-            IMapper mapper,
-            IServiceResultCreator serviceResultCreator)
+                                      IMapper mapper,
+                                      IServiceResultCreator serviceResultCreator)
         {
             _documentStorer = documentStorer;
             _mapper = mapper;
@@ -27,8 +28,8 @@ namespace NetIGeo.Domain.Services
 
         public ServiceResult<ProjectModel> Create(ProjectModel project)
         {
-            var success = _documentStorer.Store(_mapper.Map<ProjectDocument>(project));
-            return _serviceResultCreator.Create(project, success);
+            var storerResult = _documentStorer.Store(_mapper.Map<ProjectDocument>(project));
+            return _serviceResultCreator.Create(_mapper.Map<ProjectModel>(storerResult.Contents), storerResult.Success);
         }
     }
 }
