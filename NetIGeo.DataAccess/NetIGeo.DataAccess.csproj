@@ -87,6 +87,7 @@
     <Compile Include="RavenDb\DocumentStorer.cs" />
     <Compile Include="RavenDb\ProjectDocumentRepository.cs" />
     <Compile Include="RavenDb\DocumentRetriever.cs" />
+    <Compile Include="RavenDb\RavenDbConstants.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

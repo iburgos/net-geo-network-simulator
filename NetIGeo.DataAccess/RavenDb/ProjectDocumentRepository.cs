@@ -16,7 +16,6 @@ namespace NetIGeo.DataAccess.RavenDb
 
     public class ProjectDocumentRepository : IProjectDocumentRepository
     {
-        private const string DOCUMENT_TYPE = "ProjectDocuments";
         private readonly IDocumentRetriever _documentRetriever;
         private readonly IDocumentStorer _documentStorer;
         private readonly IMapper _mapper;
@@ -41,13 +40,14 @@ namespace NetIGeo.DataAccess.RavenDb
 
         public Result<IEnumerable<ProjectDocument>> GetAll()
         {
-            var result = _documentRetriever.GetAll<ProjectDocument>();
+            Result<IEnumerable<ProjectDocument>> result = _documentRetriever.GetAll<ProjectDocument>();
             return _resultCreator.Create(result.Contents, result.Success);
         }
 
         public Result<ProjectDocument> Get(int id)
         {
-            var result = _documentRetriever.Get<ProjectDocument>(id, DOCUMENT_TYPE);
+            Result<ProjectDocument> result = _documentRetriever.Get<ProjectDocument>(id,
+                RavenDbConstants.PROJECT_DOCUMENT_TYPE);
             return _resultCreator.Create(result.Contents, result.Success);
         }
     }
