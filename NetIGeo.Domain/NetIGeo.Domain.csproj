@@ -73,12 +73,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateTimeProvider.cs" />
     <Compile Include="DomainProfile.cs" />
     <Compile Include="Extensions\DomainExtension.cs" />
     <Compile Include="Models\ProjectModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceResult.cs" />
     <Compile Include="ServiceResultCreator.cs" />
+    <Compile Include="Services\ProjectUpdateService.cs" />
     <Compile Include="Services\ProjectCreationService.cs" />
     <Compile Include="Services\ProjectRetrieverService.cs" />
   </ItemGroup>

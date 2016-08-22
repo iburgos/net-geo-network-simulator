@@ -14,7 +14,7 @@ namespace NetIGeo.Domain.Tests.Services
     [TestClass]
     public class ProjectCreationServiceTests
     {
-        private Mock<IDocumentStorer> _documentStorerMock;
+        private Mock<IProjectDocumentRepository> _projectDocumentRepositoryMock;
         private IFixture _fixture;
         private Mock<IMapper> _mapperMock;
         private Mock<IServiceResultCreator> _serviceResultCreatorMock;
@@ -23,7 +23,7 @@ namespace NetIGeo.Domain.Tests.Services
         public void Initialize()
         {
             _fixture = new Fixture().Customize(new AutoConfiguredMoqCustomization());
-            _documentStorerMock = _fixture.Freeze<Mock<IDocumentStorer>>();
+            _projectDocumentRepositoryMock = _fixture.Freeze<Mock<IProjectDocumentRepository>>();
             _mapperMock = _fixture.Freeze<Mock<IMapper>>();
             _serviceResultCreatorMock = _fixture.Freeze<Mock<IServiceResultCreator>>();
         }
@@ -46,9 +46,9 @@ namespace NetIGeo.Domain.Tests.Services
             var projectDocumentToStore = _fixture.Create<ProjectDocument>();
             var projectDocumentStored = _fixture.Create<ProjectDocument>();
             var storeResult =
-                _fixture.Build<Result<IDocument>>().With(result => result.Contents, projectDocumentStored).Create();
+                _fixture.Build<Result<ProjectDocument>>().With(result => result.Contents, projectDocumentStored).Create();
             _mapperMock.Setup(mapper => mapper.Map<ProjectDocument>(projectModel)).Returns(projectDocumentToStore);
-            _documentStorerMock.Setup(storer => storer.Store(projectDocumentToStore)).Returns(storeResult);
+            _projectDocumentRepositoryMock.Setup(storer => storer.Create(projectDocumentToStore)).Returns(storeResult);
 
             var sut = _fixture.Create<ProjectCreationService>();
             sut.Create(projectModel);
@@ -64,7 +64,7 @@ namespace NetIGeo.Domain.Tests.Services
             var sut = _fixture.Create<ProjectCreationService>();
             sut.Create(project);
 
-            _documentStorerMock.Verify(storer => storer.Store(It.IsAny<ProjectDocument>()), Times.Once());
+            _projectDocumentRepositoryMock.Verify(storer => storer.Create(It.IsAny<ProjectDocument>()), Times.Once());
         }
 
         [TestMethod]
@@ -75,10 +75,10 @@ namespace NetIGeo.Domain.Tests.Services
             var projectDocumentToStore = _fixture.Create<ProjectDocument>();
             var projectDocumentStored = _fixture.Create<ProjectDocument>();
             var storeResult =
-                _fixture.Build<Result<IDocument>>().With(result => result.Contents, projectDocumentStored).Create();
+                _fixture.Build<Result<ProjectDocument>>().With(result => result.Contents, projectDocumentStored).Create();
 
             _mapperMock.Setup(mapper => mapper.Map<ProjectDocument>(projectModel)).Returns(projectDocumentToStore);
-            _documentStorerMock.Setup(storer => storer.Store(projectDocumentToStore)).Returns(storeResult);
+            _projectDocumentRepositoryMock.Setup(storer => storer.Create(projectDocumentToStore)).Returns(storeResult);
             _mapperMock.Setup(mapper => mapper.Map<ProjectModel>(projectDocumentStored)).Returns(projectModelStored);
 
             var sut = _fixture.Create<ProjectCreationService>();

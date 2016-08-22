@@ -7,32 +7,32 @@ using NetIGeo.Domain.Models;
 
 namespace NetIGeo.Domain.Services
 {
-    public interface IProjectCreationService
+    public interface IProjectUpdateService
     {
-        ServiceResult<ProjectModel> Create(ProjectModel project);
+        ServiceResult<ProjectModel> Update(ProjectModel project);
     }
 
-    public class ProjectCreationService : IProjectCreationService
+    public class ProjectUpdateService : IProjectUpdateService
     {
         private readonly IMapper _mapper;
+        private readonly IDateTimeProvider _dateTimeProvider;
         private readonly IProjectDocumentRepository _projectDocumentRepository;
         private readonly IServiceResultCreator _serviceResultCreator;
-        private readonly IDateTimeProvider _dateTimeProvider;
 
-        public ProjectCreationService(IProjectDocumentRepository projectDocumentRepository,
-                                      IMapper mapper,
-                                      IServiceResultCreator serviceResultCreator,
-                                      IDateTimeProvider dateTimeProvider)
+        public ProjectUpdateService(IProjectDocumentRepository projectDocumentRepository,
+                                    IServiceResultCreator serviceResultCreator,
+                                    IMapper mapper,
+                                    IDateTimeProvider dateTimeProvider)
         {
             _projectDocumentRepository = projectDocumentRepository;
             _mapper = mapper;
-            _serviceResultCreator = serviceResultCreator;
             _dateTimeProvider = dateTimeProvider;
+            _serviceResultCreator = serviceResultCreator;
         }
 
-        public ServiceResult<ProjectModel> Create(ProjectModel project)
+        public ServiceResult<ProjectModel> Update(ProjectModel project)
         {
-            project.CreateDate = _dateTimeProvider.NowUTC();
+            project.UpdateDate = _dateTimeProvider.NowUTC();
             Result<ProjectDocument> storerResult =
                 _projectDocumentRepository.Create(_mapper.Map<ProjectDocument>(project));
             return _serviceResultCreator.Create(_mapper.Map<ProjectModel>(storerResult.Contents), storerResult.Success);
