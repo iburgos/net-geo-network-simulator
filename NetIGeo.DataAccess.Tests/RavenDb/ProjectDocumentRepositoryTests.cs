@@ -103,7 +103,9 @@ namespace NetIGeo.DataAccess.Test.RavenDb
             var sut = _fixture.Create<ProjectDocumentRepository>();
             sut.Get(id);
 
-            _documentRetrieverMock.Verify(retriever => retriever.Get<ProjectDocument>(id, RavenDbConstants.PROJECT_DOCUMENT_TYPE), Times.Once());
+            _documentRetrieverMock.Verify(
+                retriever => retriever.Get<ProjectDocument>(id, RavenDbConstants.PROJECT_DOCUMENT_TYPE),
+                Times.Once());
         }
 
         [TestMethod]
@@ -111,7 +113,9 @@ namespace NetIGeo.DataAccess.Test.RavenDb
         {
             var id = _fixture.Create<int>();
             var retrieverResult = _fixture.Create<Result<ProjectDocument>>();
-            _documentRetrieverMock.Setup(retriever => retriever.Get<ProjectDocument>(id, RavenDbConstants.PROJECT_DOCUMENT_TYPE)).Returns(retrieverResult);
+            _documentRetrieverMock.Setup(
+                retriever => retriever.Get<ProjectDocument>(id, RavenDbConstants.PROJECT_DOCUMENT_TYPE))
+                                  .Returns(retrieverResult);
 
             var sut = _fixture.Create<ProjectDocumentRepository>();
             sut.Get(id);
