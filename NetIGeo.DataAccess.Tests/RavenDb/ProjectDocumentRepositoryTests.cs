@@ -1,15 +1,10 @@
 ﻿using System.Collections.Generic;
-
 using AutoMapper;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using Moq;
-
 using NetIGeo.DataAccess.Common;
 using NetIGeo.DataAccess.Documents;
 using NetIGeo.DataAccess.RavenDb;
-
 using Ploeh.AutoFixture;
 using Ploeh.AutoFixture.AutoMoq;
 
@@ -18,6 +13,7 @@ namespace NetIGeo.DataAccess.Test.RavenDb
     [TestClass]
     public class ProjectDocumentRepositoryTests
     {
+        private Mock<IDocumentDeleter> _documentDeleterMock;
         private Mock<IDocumentRetriever> _documentRetrieverMock;
         private Mock<IDocumentStorer> _documentStorerMock;
         private IFixture _fixture;
@@ -32,6 +28,7 @@ namespace NetIGeo.DataAccess.Test.RavenDb
             _mapperMock = _fixture.Freeze<Mock<IMapper>>();
             _documentRetrieverMock = _fixture.Freeze<Mock<IDocumentRetriever>>();
             _resultCreatorMock = _fixture.Freeze<Mock<IResultCreator>>();
+            _documentDeleterMock = _fixture.Freeze<Mock<IDocumentDeleter>>();
         }
 
         [TestMethod]
@@ -49,7 +46,7 @@ namespace NetIGeo.DataAccess.Test.RavenDb
         public void Create_Always_MapsStorerResultsToProjectDocument()
         {
             var project = _fixture.Create<ProjectDocument>();
-            Result<IDocument> storerResult = _fixture.Create<Result<IDocument>>();
+            var storerResult = _fixture.Create<Result<IDocument>>();
             _documentStorerMock.Setup(storer => storer.Store(project)).Returns(storerResult);
 
             var sut = _fixture.Create<ProjectDocumentRepository>();
@@ -62,7 +59,7 @@ namespace NetIGeo.DataAccess.Test.RavenDb
         public void Create_Always_CreatesResult()
         {
             var project = _fixture.Create<ProjectDocument>();
-            Result<IDocument> storerResult = _fixture.Create<Result<IDocument>>();
+            var storerResult = _fixture.Create<Result<IDocument>>();
             _documentStorerMock.Setup(storer => storer.Store(project)).Returns(storerResult);
             var mappedResult = _fixture.Create<ProjectDocument>();
             _mapperMock.Setup(mapper => mapper.Map<ProjectDocument>(storerResult.Contents)).Returns(mappedResult);
@@ -115,13 +112,25 @@ namespace NetIGeo.DataAccess.Test.RavenDb
             var retrieverResult = _fixture.Create<Result<ProjectDocument>>();
             _documentRetrieverMock.Setup(
                 retriever => retriever.Get<ProjectDocument>(id, RavenDbConstants.PROJECT_DOCUMENT_TYPE))
-                                  .Returns(retrieverResult);
+                .Returns(retrieverResult);
 
             var sut = _fixture.Create<ProjectDocumentRepository>();
             sut.Get(id);
 
             _resultCreatorMock.Verify(creator => creator.Create(retrieverResult.Contents, retrieverResult.Success),
                 Times.Once());
+        }
+
+        [TestMethod]
+        public void Delete_Always_CallsDocumentDeleter()
+        {
+            var id = _fixture.Create<int>();
+
+            var sut = _fixture.Create<ProjectDocumentRepository>();
+            sut.Delete(id);
+
+            _documentDeleterMock.Verify(
+                deleter => deleter.Delete<ProjectDocument>(id, RavenDbConstants.PROJECT_DOCUMENT_TYPE), Times.Once());
         }
     }
 }
