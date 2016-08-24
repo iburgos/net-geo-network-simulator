@@ -27,6 +27,7 @@ namespace NetIGeo.DataAccess.Bootstrappers
             Container.RegisterInstance(documentStore, new ContainerControlledLifetimeManager());
             Container.RegisterType<IDocumentStorer, DocumentStorer>();
             Container.RegisterType<IDocumentRetriever, DocumentRetriever>();
+            Container.RegisterType<IDocumentDeleter, DocumentDeleter>();
             Container.RegisterType<IProjectDocumentRepository, ProjectDocumentRepository>();
             Container.RegisterType<IResultCreator, ResultCreator>();
         }
