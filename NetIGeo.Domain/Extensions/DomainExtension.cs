@@ -10,6 +10,7 @@ namespace NetIGeo.Domain.Extensions
             Container.RegisterType<IProjectCreationService, ProjectCreationService>();
             Container.RegisterType<IProjectUpdateService, ProjectUpdateService>();
             Container.RegisterType<IProjectRetrieverService, ProjectRetrieverService>();
+            Container.RegisterType<IProjectDeleteService, ProjectDeleteService>();
             Container.RegisterType<IServiceResultCreator, ServiceResultCreator>();
             Container.RegisterType<IDateTimeProvider, DateTimeProvider>();
         }
