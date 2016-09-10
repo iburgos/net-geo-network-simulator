@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace NetIGeo.DataAccess.Documents
 {
@@ -8,5 +10,6 @@ namespace NetIGeo.DataAccess.Documents
         public string Name { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime UpdateDate { get; set; }
+        public IEnumerable<PointDocument> Points { get; set; } = Enumerable.Empty<PointDocument>();
     }
 }
